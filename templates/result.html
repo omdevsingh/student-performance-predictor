@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef3f9;
+            margin: 0;
+            padding: 40px 16px;
+        }
+
+        .card {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        h1 { color: #173b67; }
+
+        .score {
+            font-size: 46px;
+            font-weight: bold;
+            color: #1769aa;
+            margin: 20px 0;
+        }
+
+        .detail {
+            background: #f4f7fb;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            background: #1769aa;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .note {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Prediction Result</h1>
+        <p>Your estimated final marks</p>
+
+        <div class="score">{{ prediction }}%</div>
+
+        <div class="detail">Study hours: {{ hours }} per day</div>
+        <div class="detail">Attendance: {{ attendance }}%</div>
+        <div class="detail">Previous marks: {{ marks }}%</div>
+
+        <p class="note">
+            Educational demo using a small synthetic dataset.
+            This is not a reliable real-world forecast.
+        </p>
+
+        <a href="/">Predict Again</a>
+    </div>
+</body>
+</html>
